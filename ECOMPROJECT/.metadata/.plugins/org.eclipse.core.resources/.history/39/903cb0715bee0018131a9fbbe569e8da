@@ -1,0 +1,25 @@
+package com.niit.EComBack.model;
+
+public class Supplier {
+int Supplierid;
+String Suppliername;
+String Supplieraddress;
+public int getSupplierid() {
+	return Supplierid;
+}
+public void setSupplierid(int supplierid) {
+	Supplierid = supplierid;
+}
+public String getSuppliername() {
+	return Suppliername;
+}
+public void setSuppliername(String suppliername) {
+	Suppliername = suppliername;
+}
+public String getSupplieraddress() {
+	return Supplieraddress;
+}
+public void setSupplieraddress(String supplieraddress) {
+	Supplieraddress = supplieraddress;
+}
+}

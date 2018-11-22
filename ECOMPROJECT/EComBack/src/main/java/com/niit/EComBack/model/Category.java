@@ -1,0 +1,42 @@
+package com.niit.EComBack.model;
+import javax.persistence.Id;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Table;
+
+import org.hibernate.validator.constraints.NotBlank;
+@Entity
+@Table
+public class Category {
+	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
+	
+int CategoryId;
+	@Column(nullable=true,unique=false)
+String CategoryName;
+	@Column(nullable=false,columnDefinition="text")
+	@NotBlank(message="category description is mandatory")
+
+String CategoryDesc;
+public int getCategoryId() {
+	return CategoryId;
+}
+public void setCategoryId(int categoryId) {
+	CategoryId = categoryId;
+}
+public String getCategoryName() {
+	return CategoryName;
+}
+public void setCategoryName(String categoryName) {
+	CategoryName = categoryName;
+}
+public String getCategoryDesc() {
+	return CategoryDesc;
+}
+public void setCategoryDesc(String categoryDesc) {
+	CategoryDesc = categoryDesc;
+}
+
+}
